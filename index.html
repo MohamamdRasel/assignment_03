@@ -38,9 +38,9 @@
 <body>
     <header>
         <!--Navbar Section-->
-<nav class="mb-10" >
-    <div class="navbar bg-[#F85559] rounded-full">
-        <div class="navbar-center ">
+<nav class="mb-10 flex" >
+    <div class="navbar bg-[#F85559] rounded-full flex justify-between">
+        <div class=" flex  navbar-center ">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -71,20 +71,22 @@
           </ul>
         </div>
 
-        <div class="w-10">
+        <div class="flex justify-center">
           <img src="img/logo.png" alt="">
           <h5 class="text-white text-xl gap-5 ml-4 font-bold">FruitBurst</h5>
         </div>
 
 
-        <div class="navbar-end">
+        <div class="sm:navbar- navbar-end">
           <label class="relative block">
             <span class="sr-only">Search</span>
-            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-              <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
+            <span class="absolute inset-y-0 right-5 flex items-center pl-2">
+              <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20" ><i class="fa-solid fa-magnifying-glass"></i></svg>
+              
             </span>
             <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-full py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>
-          </label>        </div>
+          </label> 
+        </div>
       </div>
 </nav>
 
@@ -94,7 +96,7 @@
 <div class="carousel w-full">
 <!--Slider 01-->
 
-  <div id="slide1" class="carousel-item relative w-full">
+  <div id="slide1" class="carousel-item relative w-full z-10">
     <div class="bg-scroll  relative w-full" style="background-image: url(img/banner1.png)">
 
       <div class="justify-center text-center">
@@ -152,10 +154,37 @@
     </div>
   </div>
 </div>
+
+<!--Extra Bonus-->
+ <div class="md:flex md:justify-evenly lg:flex lg:justify-evenly bg-white p-14 mb-28 -mt-28 hidden">
+  <div class="flex justify-evenly ">
+    <div class="z-50 bg-white p-5">
+      <img src="img/fruit1.png" alt="">
+      <h4>Strawberry</h4>
+    </div >
+    <div class="z-50 bg-white p-5">
+      <img src="img/fruit2.png" alt="">
+      <h4>Orange</h4>
+    </div>
+    
+    <div class="z-50 bg-white p-5">
+      <img src="img/fruit3.png" alt="">
+      <h4>Mango</h4>
+    </div>
+    <div class="z-50 bg-white p-5">
+      <img src="img/fruit4.png" alt="">
+      <h4>Strawberry</h4>
+    </div>
+    <div class="z-50 bg-white p-5">
+      <img src="img/fruit5.png" alt="">
+      <h4>Strawberry</h4>
+    </div>
+  </div>
+ </div>
 <!--Deal Section-->
 <div>
-  <div class="md:flex md:justify-evenly lg:flex lg:justify-evenly ">
-    <div class=" mb-8 w-96 align-middle">
+  <div class="md:flex md:justify-evenly lg:flex lg:justify-evenly mt-12 ">
+    <div class=" mb-8 w-96 text-center">
       <h2 class="font-extrabold text-3xl mb-7">Deal of the day</h2>
       <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
     </div>
@@ -189,9 +218,12 @@
     </div>
   </div>
 
-<div class="flex gap-5 justify-evenly">
-  <div class="border-solid  ml-5  bg-white  border-red-400">
-    <img class="" src="img/fruit6.png" alt="">
+<div class="grid grid-cols-1  text-center md:grid-cols-4 lg:grid-cols-4 gap-5">
+  <div class="border-solid  ml-5  bg-white  border-red-400 ">
+    <div class="flex justify-center">
+      <img class="" src="img/fruit6.png" alt="">
+
+    </div>
     <h4 class="text-lg font-semibold">12.90$ - 18.85$</h4>
     <p class="justify-center ml-7">Apple</p>
     <div class="text-[#F85559]">
@@ -201,10 +233,29 @@
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
     </div>
-    <button class="ml-7 text-amber-600">Details</button>
+
+
+<!-- Open the modal using ID.showModal() method -->
+<button class="text-amber-600" onclick="my_modal_1.showModal()">Details</button>
+<dialog id="my_modal_1" class="modal">
+  <form method="dialog" class="modal-box">
+    <div class="flex justify-center">   
+       <img src="img/fruit6.png" alt="">
+    </div>
+    <h3 class="font-bold text-lg">Apple!</h3>
+    <p class="py-4">Best Apple is here</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
+
   </div>
   <div class="border-solid  ml-5  bg-white  border-red-400">
-    <img class="" src="img/fruit7.png" alt="">
+    <div class="flex justify-center">
+      <img class="" src="img/fruit7.png" alt="">
+    </div>
     <h4 class="text-lg font-semibold">12.90$ - 18.85$</h4>
     <p class="justify-center ml-7">Orange</p>
     <div class="text-[#F85559]">
@@ -214,10 +265,14 @@
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
     </div>
+
     <button class="ml-7 text-amber-600">Details</button>
   </div>
   <div class="border-solid  ml-5  bg-white  border-red-400">
-    <img class="" src="img/fruit8.png" alt="">
+
+    <div class="flex justify-center">
+      <img class="" src="img/fruit8.png" alt="">
+    </div>
     <h4 class="text-lg font-semibold">12.90$ - 18.85$</h4>
     <p class="justify-center ml-7">Red Dragon</p>
     <div class="text-[#F85559]">
@@ -230,7 +285,10 @@
     <button class="ml-7 text-amber-600">Details</button>
   </div>
   <div class="border-solid  ml-5  bg-white  border-red-400">
-    <img class="" src="img/fruit9.png" alt="">
+
+    <div class="flex justify-center">
+      <img class="" src="img/fruit9.png" alt="">
+    </div>
     <h4 class="text-lg font-semibold">12.90$ - 18.85$</h4>
     <p class="justify-center ml-7">Banana</p>
     <div class="text-[#F85559]">
@@ -240,7 +298,9 @@
       <i class="fa-regular fa-star"></i>
       <i class="fa-regular fa-star"></i>
     </div>
-    <button class="ml-7 text-amber-600">Details</button>
+
+
+
   </div>
   
 </div>
@@ -254,73 +314,150 @@
 </div>
 
 <!--Team Section--->
-<div class=" mt-12 bg-slate-800 bg-transparent  bg-scroll ..." style="background-image: url(img/team.png)">
+<div class=" mt-12 bg-blend-darken bg-opacity-10  bg-scroll ..." style="background-image: url(img/team.png)">
   <h1 class="text-white text-center text-5xl font-extrabold p-12 ">Meet The Team Section</h1>
   <p class="text-white text-center text-2xl ml-10 mr-10 mb-4 ">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-  <div class="grid sm:grid-cols-2 md:flex md:justify-evenly md:align-middle  lg:flex lg:justify-evenly lg:align-middle text-center ">
-    <div class="align-middle mt-12 mb-20 sm:justify-center">
-      <div class="w-24 rounded-full ml-12 mb-5 sm:justify-center">
-          <img src="/img/member1.png" />
-        
-      </div>
-      <div class="">
-        <h2 class="font-extrabold text-2xl text-white">Awlad Hossain</h2>
-        <p class="text-white">Fruit Expert</p>
-        <div class="text-amber-400 gap-5">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 mt-28 mb-32">
+
+      <div class="bg-blue-300 bg-transparent mt-10 mb-10">
+        <div class="flex justify-center">
+          <img src="img/member1.png" alt="">
+        </div>
+        <div class=" ">
+          <h2 class="font-extrabold text-2xl text-white text-center">Awlad Hossain</h2>
+          <p class="text-white text-center">Fruit Expert</p>
+          <div class="text-amber-400 gap-5 text-center">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
         </div>
       </div>
-    </div>
+      
+      <div class="bg-blue-300 bg-transparent mt-10">
+        <div class="flex justify-center">
+          <img src="img/member2.png" alt="">
+        </div>
+        <div class=" ">
+          <h2 class="font-extrabold text-2xl text-white text-center">Awlad Hossain</h2>
+          <p class="text-white text-center">Fruit Expert</p>
+          <div class="text-amber-400 gap-5 text-center">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg-blue-300 bg-transparent mt-10">
+        <div class="flex justify-center">
+          <img src="img/member3.png" alt="">
+        </div>
+        <div class=" ">
+          <h2 class="font-extrabold text-2xl text-white text-center">Awlad Hossain</h2>
+          <p class="text-white text-center">Fruit Expert</p>
+          <div class="text-amber-400 gap-5 text-center">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg-blue-300 bg-transparent mt-10">
+        <div class="flex justify-center">
+          <img src="img/member4.png" alt="">
+        </div>
+        <div class=" ">
+          <h2 class="font-extrabold text-2xl text-white text-center">Awlad Hossain</h2>
+          <p class="text-white text-center">Fruit Expert</p>
+          <div class="text-amber-400 gap-5 text-center">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+      </div>
+      </div>
 
-  
-  <div class=" mt-12 mb-20">
-    <div class="w-24 rounded-full ml-12 mb-5">
-      <img src="/img/member2.png" />
-    </div>
-    <div class="">
-      <h2 class="font-extrabold text-2xl text-white">Awlad Hossain</h2>
-      <p class="text-white">Fruit Expert</p>
-      <div class="text-amber-400">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-linkedin"></i>
-      </div>
-    </div>
-  </div>
-  <div class="mt-12 mb-20">
-    <div class="w-24 rounded-full ml-12 mb-5">
-      <img src="/img/member3.png" />
-    </div>
-    <div class="">
-      <h2 class="font-extrabold text-2xl text-white">Awlad Hossain</h2>
-      <p class="text-white">Fruit Expert</p>
-      <div class="text-amber-400">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-linkedin"></i>
-      </div>
-    </div>
-  </div>
-  <div class="mt-12 mb-20">
-    <div class="w-24 rounded-full ml-12 mb-5">
-      <img src="/img/member4.png" />
-    </div>
-    <div class="">
-      <h2 class="font-extrabold text-2xl text-white">Awlad Hossain</h2>
-      <p class="text-white">Fruit Expert</p>
-      <div class="text-amber-400">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-linkedin"></i>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 </div>
     </main>
+
+
+<!--Choose Section-->
+
+<div class="mt-16 text-center ml-5">
+  
+  <h2 class="text-4xl font-bold mb-5">Why Choose Us</h2>
+  <p class=" text-center mb-4">Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+    <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+
+
+  <div class=" grid md:grid-cols-3 lg:grid-cols-3 gap-10 ">
+    <div  class="">
+
+    <div class="flex justify-center md:justify-start lg:justify-start">
+
+      <i class="fa-solid fa-people-group text-left gap-5 mt-4"></i>
+      <div>
+        <h3 class="md:text-left lg:text-left ml-5 text-2xl font-semibold border-b-4">Dedicated Team</h3>
+      <p class="md:text-right lg:text-right ml-5 text-xl mb-4  mt-5">Professional employees are there to pick <br> the most amazing and fresh fruits.</p>
+      </div>
+    </div>
+    <div class="flex justify-center md:justify-start lg:justify-start">
+
+      <i class="fa-regular fa-heart gap-5 mt-4"></i><div>
+        <h3 class="md:text-left lg:text-left ml-5 text-2xl font-semibold border-b-4">Fresh is Best</h3>
+      <p class="md:text-right lg:text-right ml-5 text-xl mb-4  mt-5">Professional employees are thereto pick <br> the most amazing and fresh fruits.</p>
+      </div>
+    </div>
+    <div class="flex justify-center md:justify-start lg:justify-start">
+
+      <i class="fa-solid fa-gift gap-5 mt-4"></i><div>
+        <h3 class="md:text-left lg:text-left ml-5 text-2xl font-semibold border-b-4">Gift Certificates</h3>
+      <p class="md:text-right lg:text-right ml-5 text-xl mb-4 mt-5 ">Professional employees are there to pick <br> the most amazing and fresh fruits.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5 bg-center">
+    <img src="img/whychoose1.png" alt="">
+
+  </div>
+
+<div>
+<div class="flex justify-center sm:justify-end lg:justify-end">
+
+  <div>
+    <h3 class="md:text-right lg:text-right ml-5 text-2xl font-semibold border-b-4">Dedicated Team</h3>
+    <p class="md:text-right lg:text-right ml-5 text-lg mb-4 mt-5 ">Professional employees are there   to pick <br> the most amazing and fresh fruits.</p>
+  </div>
+  <i class="fa-solid fa-people-group text-right gap-5 mt-4 ml-5 mr-5"></i>
+
+</div>
+<div class="flex justify-center sm:justify-end lg:justify-end">
+
+  <div>
+    <h3 class="md:text-right lg:text-right ml-5 text-2xl font-semibold border-b-4 ">Fresh is Best</h3>
+  <p class="md:text-right lg:text-right ml-5 text-lg mb-4 mt-5 ">Professional employees are there  to pick <br> the most amazing and fresh fruits.</p>
+  </div>
+  <i class="fa-regular fa-heart gap-5 mt-4 ml-5 mr-5"></i>
+
+</div>
+<div class="flex  justify-center sm:justify-end lg:justify-end">
+
+  <div>
+    <h3 class="md:text-right lg:text-right ml-5 text-2xl font-semibold border-b-4">Gift Certificates</h3>
+    <p class="md:text-right lg:text-right ml-5 text-lg mb-4 mt-5 ">Professional employees are there  to pick <br> the most amazing and fresh fruits.</p>
+  </div>
+  <i class="fa-solid fa-gift gap-5 mt-4 ml-5 mr-5"></i>
+
+</div>
+</div>
+  </div>
+</div>
+
 <!--Footer Section-->
 
     <footer class="footer footer-center mt-20 p-10 bg-[#121212] text-base-content rounded">
@@ -328,6 +465,9 @@
         <img src="img/logo.png" alt="">
         <h3 class="text-white font-bold text-2xl" >Fruit Burst</h3>
       </div>
+
+<!--Footer Menu-->
+
       <div class="grid grid-cols-3 md:grid-flow-col lg:grid-flow-col gap-8 text-white">
         <a class="link link-hover">Home</a> 
         <a class="link link-hover">About Us</a> 
@@ -337,7 +477,7 @@
         <a class="link link-hover">My Account</a>
       </div> 
       <div>
-        <div class="grid lg:grid-flow-col md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-2  lg:grid-flow-col md:grid-cols-2 gap-8">
           <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
   <g clip-path="url(#clip0_12_5266)">
     <path d="M40 7.5975C38.5125 8.25 36.9275 8.6825 35.275 8.8925C36.975 7.8775 38.2725 6.2825 38.8825 4.36C37.2975 5.305 35.5475 5.9725 33.6825 6.345C32.1775 4.7425 30.0325 3.75 27.6925 3.75C23.1525 3.75 19.4975 7.435 19.4975 11.9525C19.4975 12.6025 19.5525 13.2275 19.6875 13.8225C12.87 13.49 6.8375 10.2225 2.785 5.245C2.0775 6.4725 1.6625 7.8775 1.6625 9.39C1.6625 12.23 3.125 14.7475 5.305 16.205C3.9875 16.18 2.695 15.7975 1.6 15.195C1.6 15.22 1.6 15.2525 1.6 15.285C1.6 19.27 4.4425 22.58 8.17 23.3425C7.5025 23.525 6.775 23.6125 6.02 23.6125C5.495 23.6125 4.965 23.5825 4.4675 23.4725C5.53 26.72 8.545 29.1075 12.13 29.185C9.34 31.3675 5.7975 32.6825 1.9625 32.6825C1.29 32.6825 0.645 32.6525 0 32.57C3.6325 34.9125 7.9375 36.25 12.58 36.25C27.67 36.25 35.92 23.75 35.92 12.915C35.92 12.5525 35.9075 12.2025 35.89 11.855C37.5175 10.7 38.885 9.2575 40 7.5975Z" fill="white"/>
